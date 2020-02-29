@@ -6,6 +6,8 @@
 
 
 body {
+    display: flex;
+    margin: 0 auto;
     flex-direction: column;
     width: 1020px;
     font-family: 'Lato';
