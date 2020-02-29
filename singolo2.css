@@ -99,3 +99,72 @@ body {
     height: 190px;
 }
 
+.about_us-container {
+    height: 735px;
+  }
+  
+  .about_us-section {
+    height: 729px;
+    padding: 57px 40px;
+    background-color: #F2F2F2;
+  }
+  
+  .about_us-container h2 {
+    font-size: 31px;
+    color: #666D89;
+  }
+  
+  .about_us-description {
+    font-size: 17px;
+    padding: 20px 0px 50px 0px;
+    line-height: 27px;
+    word-spacing: 1px;
+    letter-spacing: 0.2px;
+  }
+  
+  .about_us-people {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  .about_us-people li {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .about_us-people li img {
+    width: 300px;
+    height: auto;
+  }
+  
+  .about_us-people li h3 {
+    padding: 15px 0px 9px 0px;
+    color: #AEB2C2;
+  }
+  
+  .about_us-people li  p {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    line-height: 19px;
+    color: #979DB4;
+  }
+  
+  .about_us-people li div {
+    display: flex;
+    justify-content: space-between;
+    width: 155px;
+    padding-top: 25px;
+  }
+  
+  .about_us-people li div a {
+    text-decoration: none;
+  }
+  
+  .about_us-people li div a img {
+    width: 32px;
+    height: 32px;
+  }
+  
+
