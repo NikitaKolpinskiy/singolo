@@ -6,16 +6,12 @@
 
 
 body {
-    display: flex;
-    margin: 0 auto;
     flex-direction: column;
     width: 1020px;
     font-family: 'Lato';
 }
 
 .navigation_section {
-    width: 100%;
-    display: flex;
     height: 96px;
     background-color: #323746;
 }
@@ -77,6 +73,7 @@ body {
 
 .main_section-images {
     display: flex;
+    flex-direction: column;
     background-color: #F06C64;
     height: 600px;
 }
@@ -130,7 +127,7 @@ body {
 }
 
 
-footer {
+.service_box {
     height: 500px;
 }
 
@@ -140,9 +137,6 @@ footer {
     background-color: #F2F2F2;
 }
 
-.service_container {
-    
-}
 
 .service_container h2 {
     font-size: 31px;
@@ -156,7 +150,6 @@ footer {
     line-height: 28px;
     word-spacing: 0.9px;
     color: #9AA0B0;
-    
 }
 
 .service_section {
@@ -168,8 +161,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 945px;
-    height: 220px;
 }
 
 .service_section-list li {
@@ -178,9 +169,7 @@ footer {
     padding: 0px 40px 25px 0px;
 }
 
-.service_section-list li div h3 {
-    
-}
+
 
 .service_section-list li div p {
     padding-top: 8px;
@@ -194,4 +183,163 @@ footer {
     margin-right: 20px;
     width: 60px;
     height: 60px;
+}
+
+.portfollio_section {
+ 
+
+    background-color: #353a47;
+
+}
+
+.portfollion_container {
+    padding: 62px 41px 45px 41px;
+    height: 870px;
+}
+
+
+.portfollio_section h2 {
+    font-size: 31px;
+    color: #666D89;
+}
+
+.portfollio_section p {
+    font-size: 17px;
+    margin: 24px 0px 14px 0px;
+    word-spacing: 1.1px;
+    color: #666D89;
+}
+
+.portfollio_navigation-buttons {
+    width: 290px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.portfollio_navigation-buttons li {
+    border: 1px #666D89 solid;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.portfollio_navigation-buttons li :hover {
+    border: 1px white solid;
+    color: white;
+    border-radius: 5px;
+    transition: 0.1s ease-in-out all;
+}
+
+.portfollio_navigation-buttons-all {
+    width: 28px;
+    height: 23px;
+}
+
+.portfollio_navigation-buttons-design {
+    width: 80px;
+}
+
+.portfollio_navigation-buttons-graphic {
+    width: 90px;
+}
+
+.portfollio_navigation-buttons-artwork {
+    width: 60px;
+}
+
+.portfollio_navigation-buttons li a {
+    text-decoration: none;
+    color: #676E89;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfollio_work-samples {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-top: 20px;  
+}
+
+.portfollio_work-samples li {
+    padding-bottom: 15px;
+}
+
+.portfollio_work-samples li img {
+    width: 220px;
+    height: 190px;
+}
+
+.bottom_line {
+    height: 6px;
+    background-color: #323746;
+    width: 100%;
+}
+
+.about_us-container {
+    height: 735px;
+    padding: 57px 40px;
+    background-color: #F2F2F2;
+}
+
+.about_us-container h2 {
+    font-size: 31px;
+    color: #666D89;
+}
+
+.about_us-description {
+    font-size: 17px;
+    padding: 20px 0px 50px 0px;
+    line-height: 27px;
+    word-spacing: 1px;
+    letter-spacing: 0.2px;
+}
+
+.about_us-people {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.about_us-people li {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.about_us-people li img {
+    width: 300px;
+    height: auto;
+}
+
+.about_us-people li h3 {
+    padding: 15px 0px 9px 0px;
+    color: #AEB2C2;
+}
+
+.about_us-people li  p {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    line-height: 19px;
+    color: #979DB4;
+}
+
+.about_us-people li div {
+    display: flex;
+    justify-content: space-between;
+    width: 155px;
+    padding-top: 25px;
+}
+
+.about_us-people li div a {
+    text-decoration: none;
+}
+
+.about_us-people li div a img {
+    width: 32px;
+    height: 32px;
 }
