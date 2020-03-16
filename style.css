@@ -50,7 +50,12 @@ body {
     padding-left: 5px;
 }
 
-.navigation_list li ::after {
+.navigation_list-active {
+    background-color: rgba(240,240,240, 0.3);
+    color: white;
+}
+
+.navigation_list li::after {
     list-style: none;
     content: "\2022";
     position: relative;
@@ -61,7 +66,7 @@ body {
     padding: 0px 13.5px 0px 12.5px;
 }
 
-.navigation_list-home   ::after {
+.navigation_list-home::after {
     display: none;
 }
 
@@ -77,30 +82,56 @@ body {
 }
 
 .main_section-slides {
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 600px;
     background-color: #F16C65;
-    border-bottom: 6px #E96767 solid ;
 }
 
 .main-section-phones {
     display: flex;
     align-items: center;
-    padding: 9px 2px 0px 0px;
+    width: 810px;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.black-phone {
+    position: absolute;
+    top: 214px;
+    left: 290px;
+    height: 333px;
+    width: 189px;
+    background-color: black;
+}
+
+.vertical-phone {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.horizontal-phone {
+    margin: 0px 0px 6px 58px;
+    cursor: pointer;
 }
 
 .left_arrow_section {
     height: 30px;
     width: 30px;
     margin-left: 23px;
+    z-index: 1;
 }
 
-.righ_arrow-section {
+.right_arrow-section {
     height: 30px;
     width: 30px;
     margin-right: 8px;
+    z-index: 1;
 }
 
 .main-section_left-arrow {
@@ -123,6 +154,11 @@ body {
     background-color: rgba(240,240,240, 0.3);
 }
 
+.second-slider {
+    display: flex;
+    height: 100%;
+    position: absolute;
+}
 
 .service_box {
     height: 500px;
@@ -215,6 +251,7 @@ body {
     font-size: 12px;
 }
 
+
 .portfollio_navigation-buttons li :hover {
     border: 1px white solid;
     color: white;
@@ -263,6 +300,10 @@ body {
 .portfollio_work-samples li img {
     width: 220px;
     height: 192px;
+}
+
+.portfollio_click {
+    border: 5px #F06C64 solid;
 }
 
 .bottom_line {
@@ -530,6 +571,7 @@ body {
     height: 395px;  
 }
 
+
 .contact-form input {
     border-radius: 5px;
     border: 0px solid #D6564F;
@@ -586,6 +628,51 @@ body {
     background-color: red;
     color: white;
     transition: 0.5s ease-in-out all;
+}
+
+.modal_section-wrapper {
+    position: fixed;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+.modal_section {
+    width: 1020px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(45,48,58, 0.5);
+}
+
+.modal_window {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 600px;
+    height: 300px;
+    background-color: white;
+    border: 5px gray solid;
+    border-radius: 4px;
+    color: black;
+    padding: 10px 20px;
+}
+
+.modal_window-head {
+    font-size: 1.2rem;
+}
+
+.modal_window-button {
+    pointer-events: all;
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+    background-color: rgb(92, 179, 92);
+    border-radius: 7px;
+    cursor: pointer;
 }
 
 .contact-information_section {
