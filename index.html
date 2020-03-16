@@ -13,28 +13,38 @@
                     <h1>SINGOLO</h1>
                     <div>*</div>
                 </div>
-                <ul class="navigation_list">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li class="navigation_list-home"><a href="#">CONTACT</a></li>
+                <ul id="menu" class="navigation_list">
+                    <li><a class="navigation_list-active" href="#">HOME</a></li>
+                    <li><a href="#service_box">SERVICES</a></li>
+                    <li><a href="#portfollion_container">PORTFOLIO</a></li>
+                    <li><a href="#about_us-container">ABOUT</a></li>
+                    <li class="navigation_list-home"><a href="#quote-section">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section class="main_section-slides">
                 <figure class="left_arrow_section">
-                    <img src="./assets/chev.png" alt="chev" class="main-section_left-arrow">
+                    <img id="left-arrow" src="./assets/chev.png" alt="chev" class="main-section_left-arrow">
                 </figure>
-                <figure class="main-section-phones">
-                    <img src="./assets/iPhone123.png" alt="asd">
+                <figure id="firstFigure" class="main-section-phones">
+                    <img id="leftPhone" 
+                    data-next-img="iPhone-Vertical-offscreen.png" 
+                    class="vertical-phone" 
+                    src="./assets/iPhone-Vertical.png" alt="phone1"> 
+                    <img id="horizontal-phone" class="horizontal-phone"
+                    data-next-img="iPhone-Horizontal-offscreen.png"
+                    src="./assets/iPhone-Horizontal1.png" 
+                    alt="phone">
                 </figure>
-                <figure class="righ_arrow-section">
-                    <img src="./assets/chevright.png" class="main-section_right-arrow">
+                <figure id="secondFigure" class="second-slider hidden">
+                    <img src="./assets/Slider.png" alt="Slider">
                 </figure>     
+                <figure id="right-arrow" class="right_arrow-section">
+                    <img src="./assets/chevright.png" class="main-section_right-arrow">
+                </figure>
             </section>  
-            <section class="service_box">
+            <section id="service_box" class="service_box">
                 <div class="services_main">
                     <div class="service_container">
                         <h2>Our Services</h2>
@@ -126,25 +136,25 @@
                 </div>
             </section>
             <section class="portfollio_section">
-                <div class="portfollion_container">
+                <div id='portfollion_container' class="portfollion_container">
                     <h2>Portfolio</h2>
                     <p>
                         Duis mollis, est non commodo luctus,
                         nisi erat porttitor ligula, eget lacinia 
                         odio sem nec elit.
                     </p>
-                    <ul class="portfollio_navigation-buttons">
+                    <ul id="portfollio"  class="portfollio_navigation-buttons">
                         <li class="portfollio_navigation-buttons-all">
-                            <a href="#">All</a> 
+                            <a href="#portfollion_container">All</a> 
                         </li>
                         <li class="portfollio_navigation-buttons-design">
-                           <a href="#">Web Design</a> 
+                           <a href="#portfollion_container">Web Design</a> 
                         </li>
                         <li class="portfollio_navigation-buttons-graphic">
-                           <a href="#">Graphic Design</a> 
+                           <a href="#portfollion_container">Graphic Design</a> 
                         </li>
                         <li class="portfollio_navigation-buttons-artwork">
-                           <a href="#">Artwork</a>
+                           <a href="#portfollion_container">Artwork</a>
                         </li>
                     </ul>
                     <ul class="portfollio_work-samples">
@@ -188,7 +198,7 @@
                 </div>
                 <div class="bottom_line"></div>
             </section>
-            <section class="about_us-container">
+            <section id="about_us-container" class="about_us-container">
                 <h2>About Us</h2>
                 <p class="about_us-description">
                     Fusce dapibus, tellus ac cursus commodo, 
@@ -285,7 +295,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="quote-section">
+            <section id="quote-section" class="quote-section">
                 <h2 class="quote-title">Get a Quote</h2>
                 <p class="quote-text">
                     Fusce dapibus, tellus ac cursus commodo, 
@@ -296,15 +306,15 @@
                 </p>
                 <div class="information-container">
                     <form class="contact-form" 
-                        method="POST" target="_self">
-                        <input id="Rname" name="name" type="text" 
+                        target="_self">
+                        <input class="contact_form-input" id="contactName" name="name" type="text" 
                         required placeholder="Name (Required)">
-                        <input  id="Remail" name="email" type="email" 
+                        <input class="contact_form-input"  id="contactEmail" name="email" type="email" 
                         required placeholder="Email (Required)">
-                        <input id="subject" name="subject" type="text" placeholder="Subject">
-                        <textarea name="comment" class="comment-area" 
+                        <input class="contact_form-input" id="subject" name="subject" type="text" placeholder="Subject">
+                        <textarea class="contact_form-input" id="contactDescription" name="comment" class="comment-area" 
                         placeholder="Describe your project in detail..."></textarea>
-                        <button class="information-container_button">
+                        <button id="contactFormButton" class="information-container_button">
                             Submit
                         </button>
                     </form>
@@ -364,5 +374,16 @@
                 </ul>
             </div>
         </footer> 
+        <div class="modal_section-wrapper">
+            <div id="modalSection" class="modal_section hidden">
+                <div class="modal_window">
+                    <h2 class="modal_window-head">Письмо отправлено</h2>
+                    <div id="modalSubject"></div>
+                    <div id="modalMessage"></div>
+                    <button id="modalWindowButton" class="modal_window-button">Ok</button>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
     </body>
 </html>
