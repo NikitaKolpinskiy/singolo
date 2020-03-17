@@ -1,25 +1,24 @@
-const menu = document.getElementById("menu");
-const leftPhone = document.getElementById("leftPhone");
-const horizontalPhone = document.querySelector("#horizontal-phone")
-const portfollio = document.querySelector('.portfollio_work-samples');
-const portfollioNavigation = document.querySelector('#portfollio');
-const leftArrow = document.querySelector('#left-arrow');
-const rightArrow = document.querySelector('#right-arrow');
-const firstFigure = document.querySelector('#firstFigure');
-const secondFigure = document.querySelector('#secondFigure');
-const contactFormButton = document.querySelector('#contactFormButton');
-const modalSection = document.querySelector('#modalSection');
-const modalWindowButton = document.querySelector('#modalWindowButton');
-const contactName = document.querySelector('#contactName');
-const contactDescription = getElement('#contactDescription');
-const contactFormInputs = document.querySelectorAll('.contact_form-input');
+const menu                  = document.getElementById("menu");
+const leftPhone             = document.getElementById("leftPhone");
+const horizontalPhone       = document.querySelector("#horizontal-phone")
+const portfollio            = document.querySelector('.portfollio_work-samples');
+const portfollioNavigation  = document.querySelector('#portfollio');
+const leftArrow             = document.querySelector('#left-arrow');
+const rightArrow            = document.querySelector('#right-arrow');
+const firstFigure           = document.querySelector('#firstFigure');
+const secondFigure          = document.querySelector('#secondFigure');
+const contactFormButton     = document.querySelector('#contactFormButton');
+const modalSection          = document.querySelector('#modalSection');
+const modalWindowButton     = document.querySelector('#modalWindowButton');
+const contactName           = document.querySelector('#contactName');
+const contactDescription    = document.querySelector('#contactDescription');
+const contactFormInputs     = document.querySelectorAll('.contact_form-input');
+const subjectTitle          = document.querySelector('#subject')
 
 
 function getElement (selector) {
     return document.querySelector(selector);
 }
-
-
 
 
 menu.addEventListener('click', (event) => {
@@ -89,7 +88,7 @@ const addTextModal = (subj, comment) => {
 }
 
 contactFormButton.addEventListener('click' , (e) => {
-    let subject = contactName.value;
+    let subjectName = subjectTitle.value;
     let message = contactDescription.value;
     let requiredValue = [...document.querySelectorAll("[required]")];
 
@@ -97,7 +96,7 @@ contactFormButton.addEventListener('click' , (e) => {
     if (requiredValue.every(value => value.checkValidity())) {
         modalSection.classList.remove('hidden');
         e.preventDefault();
-        addTextModal(subject, message);
+        addTextModal(subjectName, message);
         contactFormInputs.forEach((e) => e.value = '');
     }
 })

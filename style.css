@@ -580,20 +580,20 @@ body {
     height: 40px;
 }
 
-#Rname::-webkit-input-placeholder{
+#contactName::placeholder{
     color:rgba(255,255,255, 0.5);
     padding-left: 15px;
     font-size: 11px;
     letter-spacing: 0.3px;
 }
 
-#Remail::-webkit-input-placeholder {
+#contactEmail::placeholder {
     color:rgba(255,255,255, 0.5);
     padding-left: 15px;
     font-size: 11px;   
 }
 
-#subject::-webkit-input-placeholder {
+#subject::placeholder {
     color:rgba(255,255,255, 0.5);
     padding-left: 13px;
     font-size: 12px;  
