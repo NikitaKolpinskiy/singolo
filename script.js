@@ -49,7 +49,7 @@ leftPhone.addEventListener('click', (e) => {
 });
 
 portfollioNavigation.addEventListener('click' , (e) => {
-    portfollioNavigation.querySelectorAll('li');
+
     let portfollioImages = portfollio.querySelectorAll('li');
     let portfolioImagesArray = [...portfollioImages];
     let cutPortfolioImage = portfolioImagesArray.shift();
@@ -60,6 +60,13 @@ portfollioNavigation.addEventListener('click' , (e) => {
     for (let i = 0; i <= portfolioImagesArray.length; i++ ) {
         portfollio.appendChild(portfolioImagesArray[i]);
     }
+})
+
+portfollioNavigation.addEventListener('click', (e) =>{
+    portfollioNavigation.querySelectorAll('a').forEach((n) => {
+        n.classList.remove('portfolio-navigation_active');
+        e.target.classList.add('portfolio-navigation_active');
+    })
 })
 
 portfollio.addEventListener('click' , (n) => {
