@@ -18,7 +18,7 @@ const burgerMenu            = document.querySelector('#burger-menu');
 const burgerSlider          = document.querySelector('#burger-menu_section');
 const burgerVertical        = document.querySelector('#burger-menu_vertical');
 const burgerSlide           = document.querySelector('#burger-menu_slider');
-
+const burgerList            = document.querySelector('#burger-menu_list')
 
 function getElement (selector) {
     return document.querySelector(selector);
@@ -113,3 +113,6 @@ burgerVertical.addEventListener ('click', (e) => {
     burgerSlider.classList.toggle('close-slide_menu');
 });
 
+burgerList.addEventListener('click', (e) => {
+    burgerSlider.classList.toggle('close-slide_menu');
+})
