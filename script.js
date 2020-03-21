@@ -13,7 +13,11 @@ const modalWindowButton     = document.querySelector('#modalWindowButton');
 const contactName           = document.querySelector('#contactName');
 const contactDescription    = document.querySelector('#contactDescription');
 const contactFormInputs     = document.querySelectorAll('.contact_form-input');
-const subjectTitle          = document.querySelector('#subject')
+const subjectTitle          = document.querySelector('#subject');
+const burgerMenu            = document.querySelector('#burger-menu');
+const burgerSlider          = document.querySelector('#burger-menu_section');
+const burgerVertical        = document.querySelector('#burger-menu_vertical');
+const burgerSlide           = document.querySelector('#burger-menu_slider');
 
 
 function getElement (selector) {
@@ -92,11 +96,20 @@ contactFormButton.addEventListener('click' , (e) => {
     let message = contactDescription.value;
     let requiredValue = [...document.querySelectorAll("[required]")];
 
-
     if (requiredValue.every(value => value.checkValidity())) {
         modalSection.classList.remove('hidden');
         e.preventDefault();
         addTextModal(subjectName, message);
         contactFormInputs.forEach((e) => e.value = '');
     }
-})
+});
+
+
+burgerMenu.addEventListener('click', (e) => {
+    burgerSlider.classList.toggle('close-slide_menu');
+});
+
+burgerVertical.addEventListener ('click', (e) => {
+    burgerSlider.classList.toggle('close-slide_menu');
+});
+

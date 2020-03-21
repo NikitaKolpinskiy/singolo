@@ -11,11 +11,16 @@ body {
     flex-direction: column;
     width: 1020px;
     font-family: 'Lato';
+    scroll-behavior: smooth;
 }
 
 .navigation_section {
     height: 96px;
     background-color: #323746;
+}
+
+.horizontal-burger-menu {
+    display: none;
 }
 
 .logo_name {
@@ -33,6 +38,8 @@ body {
 }
 
 .navigation_container {
+    width: 1020px;
+    position: fixed;
     height: 90px;
     background-color: #2D303A;
     display: flex;
@@ -51,6 +58,7 @@ body {
 }
 
 .navigation_list-active {
+    border-radius: 2px;
     background-color: rgba(240,240,240, 0.3);
     color: white;
 }
@@ -82,7 +90,6 @@ body {
 }
 
 .main_section-slides {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,6 +132,7 @@ body {
     width: 30px;
     margin-left: 23px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .right_arrow-section {
@@ -132,6 +140,7 @@ body {
     width: 30px;
     margin-right: 8px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .main-section_left-arrow {
@@ -144,12 +153,12 @@ body {
     font-weight: bold;
 }
 
-.righ_arrow-section :hover {
+.right_arrow-section:hover {
     cursor: pointer;
     background-color: rgba(240,240,240, 0.3);
 }
 
-.left_arrow_section :hover {
+.left_arrow_section:hover {
     cursor: pointer;
     background-color: rgba(240,240,240, 0.3);
 }
@@ -161,7 +170,6 @@ body {
 }
 
 .service_box {
-    height: 500px;
     padding: 57px 20px 57px 40px;
     background-color: #F2F2F2;
 }
@@ -218,11 +226,13 @@ body {
 
 .portfollio_section {
     background-color: #2D2F3B;
+    display: flex;
+    flex-direction: column;
 }
 
-.portfollion_container {
+.portfollio_container {
     padding: 62px 41px 45px 41px;
-    height: 870px;
+
 }
 
 
@@ -342,7 +352,6 @@ body {
 .about_us-people li {
     display: flex;
     flex-direction: column;
-    width: 300px;
 }
 
 .about_us-people li img {
@@ -351,7 +360,7 @@ body {
 }
 
 .about_us-people li h3 {
-    margin 15px 0px 9px 0px;
+    margin: 15px 0px 9px 0px;
     color: #AEB2C2;
 }
 
@@ -383,23 +392,18 @@ body {
     border-radius: 31px;
 }
 
-.portfollio_section {
-    background-color: #323746;
-    height: 870px;
-}
 
-.portfollion_container {
-    height: 864px;
+.portfollio_container {
     padding: 60px 41px 45px 41px;
     background-color: #353a47;
 }
 
-.portfollion_container h2 {
+.portfollio_container h2 {
     font-size: 31px;
     color: #666D89;
 }
 
-.portfollion_container p {
+.portfollio_container p {
     font-size: 17px;
     margin: 20px 0px 15px 0px;
     word-spacing: 1.1px;
@@ -553,7 +557,6 @@ body {
 
 .quote-text {
     margin: 22px 0px 45px 0px;
-    width: 945px;
     line-height: 26px;
     word-spacing: 0.7px;
     letter-spacing: 0.3px;
@@ -739,4 +742,281 @@ body {
 .footer-contacts img:hover {
     background-color: rgb(32,34,58);
     border-radius: 31px;
+}
+
+.horizontal-burger-menu {
+    cursor: pointer;
+}
+
+.vertical-burger-menu {
+    cursor: pointer;
+}
+
+.burger-menu_section {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: rgba(45,48,58, 0.5);
+    top:0;
+    left: 0;
+}
+
+.burger-menu_slider {
+    width: 80%;
+    background-color: rgb(45,48,58);
+    height: 100%;
+    position: absolute;
+}
+
+.close-slide_menu {
+    width: 0%;
+}
+
+.burger-menu_slider-header {
+    display: flex;
+    align-items: center;
+    padding: 0px 105px 0px 20px;
+    height: 90px;
+}
+
+.burger-menu_slider-header img {
+    width: 25px;
+    height: 20px;
+}
+
+.burger-logo_name {
+    display: flex;
+    margin-left: 28.5px;
+}
+
+.burger-logo_name h1 {
+    font-size: 20px;
+    color: white;
+}
+
+
+.burger-logo_name div {
+    font-size: 1.6em;
+    color: #F06C64;
+}
+
+.burger-menu_navigation {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger-menu_list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.burger-menu_list li {
+    margin-bottom: 10%;
+}
+
+.burger-menu_list a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+.burger-menu_list a:hover {
+    color: #F06C64;
+    transition: 0.1s ease-in-out all;
+}
+
+@media screen and (max-width: 1020px) {
+    body {
+        width: 100%;
+    }
+
+    .navigation_container {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 786px) {
+    .navigation_list {
+        width: 400px;
+    }
+
+    .left-arrow {
+        width: 200px;
+    }
+
+    .horizontal-phone {
+        width: 400px;    
+    }
+    .service_container article p {
+        font-size: 20px;
+    }
+
+    .service_section-list {
+        padding: 0px 5px;
+        justify-content: space-between;
+    }
+
+    .service_section-list li {
+        max-width: 40%;
+    }
+    
+    .service_section-list li div p {
+        font-size: 15px;
+    }
+
+    .portfollio_container p {
+        font-size: 20px;
+    }
+
+    .portfollio_work-samples img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .portfollio_section {
+        height: 100%;
+    }
+
+    .portfollio_work-samples li {
+        display: flex;
+        justify-content: center;
+        flex-basis: 33%;
+        margin: 0px 0px 20px 0px;
+    }
+    .about_us-people li img {
+        width: 200px;
+    }
+
+    .contact-form input {
+        width: 420px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .navigation_list {
+        display: none;
+    }
+
+    .horizontal-burger-menu {
+        display: initial;
+    }
+
+    .navigation_container {
+        justify-content: space-between;
+        position: static;
+    }
+    
+
+    .logo_name {
+        font-size: 0.8rem;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .main-section-phones {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .vertical-phone {
+        width: 95px;
+    }
+
+    .horizontal-phone {
+        width: 185px;
+        margin: 0;
+    }
+
+    .left_arrow_section {
+        margin: 0px 0px 0px 10px;
+    }
+
+    .service_section-list {
+        flex-direction: column;
+    }
+
+    .service_section-list li {
+        max-width: 100%;
+    }
+
+    .portfollio_work-samples li img {
+        width: 131px;
+        height: 128px;
+    }
+
+    .about_us-container {
+        height: 100%;
+    }
+
+    .about_us-people {
+        flex-wrap: wrap;
+    }
+
+    .about_us-people h3 {
+        font-size: 18px;
+    }
+
+    .about_us-people li {
+        margin-bottom: 30px;
+    }
+
+    .about_us-people li img {
+        width: 100%;
+    }
+
+    .about_us-people li p {
+        font-size: 14px;
+    }
+
+    .quote-section {
+        height: 100%;
+        padding: 35px 30px;
+    }
+
+    .contact-form input {
+        width: 315px;
+    }
+
+    .information-container {
+        flex-wrap: wrap;
+    }
+
+    .information-container_button {
+        width: 100%;
+        height: 40px;
+    }
+
+    .contact-information_section {
+        height: 100%;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .footer-container p {
+        display: none;
+    }
+
+    .footer-container {
+        justify-content: center;    
+    }
+
+    .modal_section {
+        width: 100%;
+    }
+    .modal_window {
+        width: 85%;
+    }
+
+    .second-slider img {
+        display: flex;
+        width: 100%;    
+    }
 }
