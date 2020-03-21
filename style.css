@@ -38,6 +38,7 @@ body {
 }
 
 .navigation_container {
+    z-index: 2;
     width: 1020px;
     position: fixed;
     height: 90px;
